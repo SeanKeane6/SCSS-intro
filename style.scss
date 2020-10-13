@@ -1,0 +1,57 @@
+$colors: (
+  primary: #45a29e,
+  primary-light: #66fcf1,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; //Mr. Whalen I forgot what this means??? Who cares Julissa, set it and forget it
+  font-size: 62.5%; //50% on iphone
+  //PX's are for monkeys, rem = relative units, 1 rem = 10px, vh = viewport  height or vw = viewport width 95vw === 95% of screen width hh
+  //rachel is cool
+  font-family: "Josefin Sans", sans-serif;
+  background-color: black;
+}
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(color(primary), 0.5),
+      rgba(color(primary-light), 0.5)
+    ),
+    url(img/headphones-bg.jpg);
+  background-size: cover;
+  //background-position: bottom;
+  /*  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+.header-text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header-primary {
+  font-size: 10rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+.header-primary-main {
+  display: block;
+  letter-spacing: 1rem;
+  text-shadow: #333 6px 6px;
+}
+.header-primary-sub {
+  font-size: 4rem;
+}

@@ -1,0 +1,50 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: black;
+}
+
+.header {
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(69, 162, 158, 0.5)), to(rgba(102, 252, 241, 0.5))), url(img/headphones-bg.jpg);
+  background-image: linear-gradient(to right bottom, rgba(69, 162, 158, 0.5), rgba(102, 252, 241, 0.5)), url(img/headphones-bg.jpg);
+  background-size: cover;
+  /*  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+
+.header-text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.header-primary {
+  font-size: 10rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.header-primary-main {
+  display: block;
+  letter-spacing: 1rem;
+  text-shadow: #333 6px 6px;
+}
+
+.header-primary-sub {
+  font-size: 4rem;
+}
+/*# sourceMappingURL=style.css.map */
